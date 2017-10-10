@@ -77,7 +77,7 @@ var albumPicasso = {
       }
   };
 
-  var findParentByClassName = function(element, targetClass) {
+var findParentByClassName = function(element, targetClass) {
     if (element) {
       var currentParent = element.parentElement;
  while (currentParent.className !== targetClass && currentParent.className !== null) {
@@ -117,7 +117,7 @@ var pauseButtonTemplate = '<a class="album-song-button"><span class="ion-pause">
  // Store state of playing songs
 var currentlyPlayingSong = null;
 
-  window.onload = function() {
+window.onload = function() {
       setCurrentAlbum(albumPicasso);
 
       songListContainer.addEventListener('mouseover', function(event) {
