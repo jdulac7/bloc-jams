@@ -137,7 +137,7 @@ var currentVolume = 80;
 var $previousButton = $('.main-controls .previous');
 var $nextButton = $('.main-controls .next');
 var $playPauseButton = $('.main-controls .play-pause');
-
+var $albumImage = $('.album-cover-art');
 
 $(document).ready(function() {
 
@@ -149,11 +149,11 @@ $(document).ready(function() {
     var albums = [albumPicasso, albumMarconi, albumLumineers];
     var index = 0;
 
-    albumImage.addEventListener("click", function(event) {
-        setCurrentAlbum(albumList[index]);
+    $albumImage.click(function() {
+        setCurrentAlbum(albums[index]);
         index++;
 
-        if (index == albumList.length) {
+        if (index == albums.length) {
             index = 0;
         }
     });
