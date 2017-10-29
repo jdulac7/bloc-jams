@@ -122,7 +122,6 @@ var setCurrentAlbum = function(album) {
       var $albumTitle = $('.album-view-title');
       var $albumArtist = $('.album-view-artist');
       var $albumReleaseInfo = $('.album-view-release-info');
-      var $albumImage = $('.album-cover-art');
       var $albumSongList = $('.album-view-song-list');
 
     $albumTitle.text(album.title);
@@ -365,8 +364,10 @@ var updatePlayerBarSong = function() {
    var $previousButton = $('.main-controls .previous');
    var $nextButton = $('.main-controls .next');
    var $playPauseButton = $('.main-controls .play-pause');
+   var $albumImage = $('.album-cover-art');
 
   $(document).ready(function() {
+
 
       setCurrentAlbum(albumPicasso);
       setupSeekBars();
@@ -379,8 +380,8 @@ var updatePlayerBarSong = function() {
       var index = 0;
 
       $albumImage.click(function() {
-          setCurrentAlbum(albums[index]);
-          index++;
+              setCurrentAlbum(albums[index]);
+                index++;
 
           if (index == albums.length) {
               index = 0;
