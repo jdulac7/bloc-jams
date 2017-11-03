@@ -49,7 +49,6 @@ var createSongRow = function (songNumber, songName, songLength) {
         '<tr class="album-view-song-item">'
     +   '   <td class="song-item-number" data-song-number="' + songNumber + '">' + songNumber + '</td>'
     +   '   <td class="song-item-title">' + songName + '</td>'
-    +   '   <td class="song-item-duration">' + songLength + '</td>'
     +   '   <td class="song-item-duration">' + timeCode(songLength) + '</td>'
     +   '</tr>'
     ;
@@ -150,7 +149,7 @@ var updateSeekBarWhileSongPlays = function() {
             //  sets text of the element with the .current-time class to the current time in the song.
             var setCurrentTimeInPlayerBar = function(currentTime) {
               // Set text of current time to argument
-                 $('.seek-control .current-time').text(timeCode(currentTime));
+                 $('.currently-playing .current-time').text(timeCode(currentTime));
                  };
 
               setCurrentTimeInPlayerBar(this.getTime());
